@@ -3,9 +3,9 @@ from typing import Dict,Optional
 from fastapi import FastAPI
 app = FastAPI()
 
-@app.get('/api')
+@app.get('/')
 def index():
-    return 'Welcome to this api, go to /api/docs to see documentation'
+    return '<h2>Welcome to this api, go to /api/docs to see documentation</h2>'
 
 @app.get('/api')
 def predict(q1: float , q2 : float , q3: float ) -> Dict:
