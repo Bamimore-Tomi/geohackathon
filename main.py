@@ -14,7 +14,7 @@ class Prediction(BaseModel):
 def index():
     return '<h2>Welcome to this api, go to /docs to see documentation</h2>'
 
-@app.get('/api', response_model=Prediction)
+@app.get('/api/', response_model=Prediction)
 def predict(q1: Optional[float]=None , q2 : Optional[float]=None , q3: Optional[float]=None):
     df_test = np.array([q1,q2,q3])
     df_test = df_test.reshape(1,-1)
