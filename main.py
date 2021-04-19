@@ -1,6 +1,6 @@
 from typing import Dict,Optional
-import pickle
 import numpy as np
+import pickle
 from pydantic import BaseModel
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
